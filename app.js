@@ -104,3 +104,14 @@ const propertyName = 'center location';
 circle[propertyName] = { x: 1 };
 
 delete circle.location;
+
+for(let key in circle) {
+    if(typeof circle[key] !== 'function')
+        console.log(key, circle[key])
+}
+
+const keys = Object.keys(circle);
+console.log("🚀 ~ file: app.js:114 ~ keys:", keys);
+
+if('radius' in circle)
+    console.log(first)
