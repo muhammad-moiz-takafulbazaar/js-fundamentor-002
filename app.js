@@ -9,29 +9,41 @@
 //     }
 // };
 
-// factory function
-function createCircle(radius) {
-  return {
-    radius,
-    draw: function () {
-      console.log('draw');
-    },
-  };
-}
+// // factory function
+// function createCircle(radius) {
+//   return {
+//     radius,
+//     draw: function () {
+//       console.log('draw');
+//     },
+//   };
+// }
 
-const circle = createCircle(1);
+// const circle = createCircle(1);
 
-// circle.draw();
+// // circle.draw();
 
-// Constructor function
-function Circle(radius) {
-  console.log('this', this);
+// // Constructor function
+// function Circle(radius) {
+//   console.log('this', this);
+//   this.radius = radius;
+//   this.draw = function () {
+//     console.log('draw');
+//   };
+// }
+
+// const anotherCircle = new Circle(1);
+
+// anotherCircle.draw()
+
+const Circle1 = new Function(
+  'radius',
+  `
   this.radius = radius;
   this.draw = function () {
     console.log('draw');
   };
-}
+`
+);
 
-const anotherCircle = new Circle(1);
-
-anotherCircle.draw()
+const circle1 = new Circle1(1); 
