@@ -34,16 +34,20 @@
 
 // const anotherCircle = new Circle(1);
 
+// const anotherCircle2 = Circle.call({}, 1);
+
+// const anotherCircle3 = Circle.apply({}, 1);
+
 // anotherCircle.draw()
 
-const Circle1 = new Function(
-  'radius',
-  `
-  this.radius = radius;
-  this.draw = function () {
-    console.log('draw');
-  };
-`
-);
+// const Circle1 = new Function(
+//   'radius',
+//   `
+//   this.radius = radius;
+//   this.draw = function () {
+//     console.log('draw');
+//   };
+// `
+// );
 
-const circle1 = new Circle1(1); 
+// const circle1 = new Circle1(1); 
