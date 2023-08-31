@@ -60,10 +60,30 @@
 
 // x = 20;
 
-/**
- * objects are copied by their reference
- */
-let x = { value: 10};
-let y = x;
+// /**
+//  * objects are copied by their reference
+//  */
+// let x = { value: 10};
+// let y = x;
 
-x.value = 20;
+// x.value = 20;
+
+// let number = 10;
+
+// function increment(number) {
+//     number++;
+// }
+
+// increment(number);
+
+// console.log(number)
+
+// let obj = { value: 10 };
+
+// function increment(obj) {
+//   obj.value++;
+// }
+
+// increment(obj);
+
+// console.log(obj);
