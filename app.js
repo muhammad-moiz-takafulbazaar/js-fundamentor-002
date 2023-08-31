@@ -51,3 +51,19 @@
 // );
 
 // const circle1 = new Circle1(1); 
+
+/**
+ * Primitives are copied by their value
+ */
+// let x = 10;
+// let y = x;
+
+// x = 20;
+
+/**
+ * objects are copied by their reference
+ */
+let x = { value: 10};
+let y = x;
+
+x.value = 20;
