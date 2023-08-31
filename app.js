@@ -88,30 +88,51 @@
 
 // console.log(obj);
 
+// function Circle(radius) {
+//   this.radius = radius;
+//   this.draw = function () {
+//     console.log('draw');
+//   };
+// }
+
+// const circle = new Circle(10);
+
+// circle.location = { x: 1 };
+// // const propertyName = 'location';
+// const propertyName = 'center location';
+// // circle['location'] = { x: 1 };
+// circle[propertyName] = { x: 1 };
+
+// delete circle.location;
+
+// for(let key in circle) {
+//     if(typeof circle[key] !== 'function')
+//         console.log(key, circle[key])
+// }
+
+// const keys = Object.keys(circle);
+// console.log("🚀 ~ file: app.js:114 ~ keys:", keys);
+
+// if('radius' in circle)
+//     console.log(first)
+
 function Circle(radius) {
-  this.radius = radius;
-  this.draw = function () {
-    console.log('draw');
-  };
+    this.radius = radius;
+
+    this.defaultLocation = { x: 0, y: 0 }
+
+    this.computeOptimumLocation = function(factor) {
+        // ...
+    }
+
+    this.draw = function() {
+        this.computeOptimumLocation();
+
+        console.log('draw');
+    };
 }
 
 const circle = new Circle(10);
-
-circle.location = { x: 1 };
-// const propertyName = 'location';
-const propertyName = 'center location';
-// circle['location'] = { x: 1 };
-circle[propertyName] = { x: 1 };
-
-delete circle.location;
-
-for(let key in circle) {
-    if(typeof circle[key] !== 'function')
-        console.log(key, circle[key])
-}
-
-const keys = Object.keys(circle);
-console.log("🚀 ~ file: app.js:114 ~ keys:", keys);
-
-if('radius' in circle)
-    console.log(first)
+circle.defaultLocation = false;
+circle.computeOptimumLocation();
+circle.draw();
