@@ -50,7 +50,7 @@
 // `
 // );
 
-// const circle1 = new Circle1(1); 
+// const circle1 = new Circle1(1);
 
 /**
  * Primitives are copied by their value
@@ -87,3 +87,20 @@
 // increment(obj);
 
 // console.log(obj);
+
+function Circle(radius) {
+  this.radius = radius;
+  this.draw = function () {
+    console.log('draw');
+  };
+}
+
+const circle = new Circle(10);
+
+circle.location = { x: 1 };
+// const propertyName = 'location';
+const propertyName = 'center location';
+// circle['location'] = { x: 1 };
+circle[propertyName] = { x: 1 };
+
+delete circle.location;
