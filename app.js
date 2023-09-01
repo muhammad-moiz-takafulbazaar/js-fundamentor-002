@@ -116,14 +116,36 @@
 // if('radius' in circle)
 //     console.log(first)
 
+// function Circle(radius) {
+
+//     this.radius = radius;
+
+//     let defaultLocation = { x: 0, y: 0 }
+
+//     const computeOptimumLocation = (factor) => {
+//         // ... 
+//     }
+
+//     this.draw = function() {
+//         this.computeOptimumLocation();
+
+//         console.log('draw');
+//     };
+// }
+
+// const circle = new Circle(10);
+// circle.defaultLocation = false;
+// circle.computeOptimumLocation();
+// circle.draw();
+
 function Circle(radius) {
 
     this.radius = radius;
 
     let defaultLocation = { x: 0, y: 0 }
 
-    const computeOptimumLocation = (factor) => {
-        // ... 
+    this.getDefaultLocation = function() {
+        return defaultLocation;
     }
 
     this.draw = function() {
@@ -134,6 +156,5 @@ function Circle(radius) {
 }
 
 const circle = new Circle(10);
-circle.defaultLocation = false;
-circle.computeOptimumLocation();
+circle.getDefaultLocation();
 circle.draw();
